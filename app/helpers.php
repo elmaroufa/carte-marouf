@@ -17,17 +17,9 @@ if(! function_exists('page_title'))
 	       }
 	       if(! function_exists("actives"))
 	       	    {
-	       	    	function actives($title)
+	       	    	function actives($route)
 	       	    	        {
-	       	    	        	if($title=="Home")
-	       	    	        		  {
-	       	    	        		  	return "active";
-	       	    	        		  }
-	       	    	        		  else if($title=="About")
-	       	    	        		  	   {
-	       	    	        		  	   	return "active";
-	       	    	        		  	   }
-	       	    	        		  	   else return " ";
+	       	    	        	return Route::is($route)? 'active' : '';
 	       	    	        }
 	       	    }
 	       
